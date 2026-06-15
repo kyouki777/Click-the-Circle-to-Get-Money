@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bd8dkf2p2up11"]
+
+[ext_resource type="Texture2D" uid="uid://bw0nyqvn3ou44" path="res://assets/label_bg.png" id="1_xubjp"]
+[ext_resource type="FontFile" uid="uid://pntlljl77f2n" path="res://assets/Poco.ttf" id="2_om3t5"]
+
+[sub_resource type="Theme" id="Theme_xubjp"]
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("2_om3t5")
+ProgressBar/font_sizes/font_size = 20
+ProgressBar/fonts/font = ExtResource("2_om3t5")
+
+[node name="ProgressLabel" type="NinePatchRect" unique_id=958203159]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -902.0
+offset_bottom = -578.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_xubjp")
+texture = ExtResource("1_xubjp")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Label" type="Label" parent="." unique_id=1073573770]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -110.0
+offset_right = 110.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_om3t5")
+theme_override_font_sizes/font_size = 40
+text = "Progress: 0%"
+horizontal_alignment = 1
+vertical_alignment = 1
