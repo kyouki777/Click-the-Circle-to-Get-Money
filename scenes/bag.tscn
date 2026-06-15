@@ -47,7 +47,7 @@ layout_mode = 2
 layout_mode = 2
 theme = ExtResource("2_qlbld")
 theme_override_font_sizes/font_size = 40
-text = "Extra click Rp 1.000"
+text = "Extra click Rp 100"
 icon_alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
@@ -61,15 +61,60 @@ horizontal_alignment = 2
 layout_mode = 2
 theme = ExtResource("2_qlbld")
 theme_override_font_sizes/font_size = 40
-text = "Extra extra clicks Rp 2.000"
+text = "Extra extra clicks Rp 200"
 icon_alignment = 1
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_qlbld")
 theme_override_font_sizes/font_size = 30
-text = "+2 clicks for every upgrade"
+text = "+3 clicks for every upgrade"
+horizontal_alignment = 2
+
+[node name="extraClick3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_qlbld")
+theme_override_font_sizes/font_size = 40
+text = "Lots of clicks Rp 10.000"
+icon_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_qlbld")
+theme_override_font_sizes/font_size = 30
+text = "+150 clicks for every upgrade"
+horizontal_alignment = 2
+
+[node name="extraClick4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_qlbld")
+theme_override_font_sizes/font_size = 40
+text = "Bag of clicks Rp 100.000"
+icon_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_qlbld")
+theme_override_font_sizes/font_size = 30
+text = "+1.500 clicks for every upgrade"
+horizontal_alignment = 2
+
+[node name="extraClick5" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_qlbld")
+theme_override_font_sizes/font_size = 40
+text = "Big Chongus of clicks Rp 1.000.000"
+icon_alignment = 1
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_qlbld")
+theme_override_font_sizes/font_size = 30
+text = "+15.000 clicks for every upgrade"
 horizontal_alignment = 2
 
 [connection signal="button_down" from="VBoxContainer/extraClick" to="." method="_on_extra_click_button_down"]
 [connection signal="button_down" from="VBoxContainer/extraClick2" to="." method="_on_extra_click_2_button_down"]
+[connection signal="button_down" from="VBoxContainer/extraClick3" to="." method="_on_extra_click_3_button_down"]
+[connection signal="button_down" from="VBoxContainer/extraClick4" to="." method="_on_extra_click_4_button_down"]
+[connection signal="button_down" from="VBoxContainer/extraClick5" to="." method="_on_extra_click_5_button_down"]
