@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://cm2mqn6nowwts"]
+
+[ext_resource type="Script" uid="uid://bjbdo8e3m0xo8" path="res://email.gd" id="1_710lg"]
+[ext_resource type="Texture2D" uid="uid://bklr2kwfye26a" path="res://assets/new-mail-icon.png" id="1_b7pj5"]
+[ext_resource type="Texture2D" uid="uid://d4i0te0ua4ux4" path="res://assets/image.png" id="2_l5d43"]
+[ext_resource type="AudioStream" uid="uid://d13io6pk46pqk" path="res://assets/sound/universfield-new-notification-042-493470.mp3" id="4_vj7p1"]
+[ext_resource type="Texture2D" uid="uid://268bkc4oxqbg" path="res://assets/no-profile-picture-15257_64.png" id="5_vj7p1"]
+[ext_resource type="AudioStream" uid="uid://8y4d460g0tyw" path="res://assets/sound/ncprime-keyboard-typing-one-short-1-292590.mp3" id="6_ylg70"]
+[ext_resource type="FontFile" uid="uid://pntlljl77f2n" path="res://assets/Poco.ttf" id="7_d56f8"]
+
+[node name="Control" type="Control" unique_id=479371950]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_710lg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=699470810]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="emailContainer" type="VBoxContainer" parent="ColorRect" unique_id=1411057027]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="ColorRect/emailContainer" unique_id=1254207574]
+visible = false
+layout_mode = 2
+text = "Email"
+
+[node name="TextureButton" type="TextureButton" parent="ColorRect/emailContainer" unique_id=917637324]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture_normal = ExtResource("1_b7pj5")
+texture_hover = ExtResource("2_l5d43")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="notifSound" type="AudioStreamPlayer2D" parent="ColorRect/emailContainer/TextureButton" unique_id=1226993875]
+stream = ExtResource("4_vj7p1")
+
+[node name="emailMessage" type="Control" parent="ColorRect" unique_id=231376519]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 90.0
+offset_top = 70.0
+offset_right = -82.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="VBoxContainer" parent="ColorRect/emailMessage" unique_id=700281499]
+layout_mode = 0
+offset_right = 472.0
+offset_bottom = 50.0
+
+[node name="Label" type="Label" parent="ColorRect/emailMessage/HBoxContainer" unique_id=1630020418]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Re: Make Your Childhood Dream Come True Giveaway!"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/emailMessage/HBoxContainer" unique_id=323728277]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/emailMessage/HBoxContainer/HBoxContainer" unique_id=1813015439]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("5_vj7p1")
+stretch_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/emailMessage/HBoxContainer/HBoxContainer" unique_id=1443487609]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/emailMessage/HBoxContainer/HBoxContainer/VBoxContainer" unique_id=1730933578]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="ColorRect/emailMessage/HBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=415775432]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "4d4min"
+
+[node name="Label" type="Label" parent="ColorRect/emailMessage/HBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2077590333]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "<4d4min300299@beemail.com>"
+
+[node name="tome" type="Label" parent="ColorRect/emailMessage/HBoxContainer/HBoxContainer/VBoxContainer" unique_id=534259690]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "to me"
+
+[node name="insideEmail" type="RichTextLabel" parent="ColorRect/emailMessage/HBoxContainer" unique_id=1297195176]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 14
+fit_content = true
+
+[node name="typingSound" type="AudioStreamPlayer2D" parent="ColorRect/emailMessage/HBoxContainer/insideEmail" unique_id=1395172901]
+stream = ExtResource("6_ylg70")
+
+[node name="replyButton" type="Button" parent="ColorRect/emailMessage" unique_id=1801368066]
+visible = false
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 0
+offset_left = 811.0
+offset_top = 483.0
+offset_right = 1011.0
+offset_bottom = 533.0
+theme_override_fonts/font = ExtResource("7_d56f8")
+theme_override_font_sizes/font_size = 24
+text = "Reply"
+
+[connection signal="button_down" from="ColorRect/emailContainer/TextureButton" to="." method="_on_texture_button_button_down"]
+[connection signal="button_down" from="ColorRect/emailMessage/replyButton" to="." method="_on_reply_button_button_down"]

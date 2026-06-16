@@ -1,17 +1,70 @@
 [gd_scene format=3 uid="uid://csubvsc2ogi8l"]
 
-[node name="Node2D" type="Control"]
+[ext_resource type="Script" uid="uid://oh5fxbqhien1" path="res://main_menu.gd" id="1_eiy7p"]
+[ext_resource type="Theme" uid="uid://cqst728xxipcw" path="res://addons/dialogic/Editor/Theme/MainTheme.tres" id="1_i26rj"]
+
+[node name="mainMenuUI" type="Control" unique_id=308950915]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_eiy7p")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1403647014]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1489440482]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1481101038]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -70.0
+offset_right = 150.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="startButton" type="Button" parent="ColorRect/VBoxContainer" unique_id=607877724]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("1_i26rj")
+theme_override_font_sizes/font_size = 30
+text = "Start"
+
+[node name="optionsButton" type="Button" parent="ColorRect/VBoxContainer" unique_id=500373467]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("1_i26rj")
+theme_override_font_sizes/font_size = 30
+text = "Options"
+
+[node name="exitButton" type="Button" parent="ColorRect/VBoxContainer" unique_id=1360200271]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("1_i26rj")
+theme_override_font_sizes/font_size = 30
+text = "Exit"
+
+[connection signal="button_down" from="ColorRect/VBoxContainer/startButton" to="." method="_on_start_button_button_down"]
+[connection signal="button_down" from="ColorRect/VBoxContainer/optionsButton" to="." method="_on_options_button_button_down"]
+[connection signal="button_down" from="ColorRect/VBoxContainer/exitButton" to="." method="_on_exit_button_button_down"]

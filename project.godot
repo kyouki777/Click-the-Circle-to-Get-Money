@@ -16,12 +16,12 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Click The Circle For Money"
 run/main_scene="uid://bk5yubiyrgd77"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
@@ -33,7 +33,10 @@ directories/dch_directory={
 directories/dtl_directory={
 "opening": "res://opening.dtl"
 }
-layout/style_directory={}
+layout/style_directory={
+"": "res://mainStyleDialogue.tres",
+"mainStyleDialogue": "res://mainStyleDialogue.tres"
+}
 variables={}
 text/letter_speed=0.06
 text/initial_text_reveal_skippable=true
@@ -67,8 +70,8 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://mainStyleDialogue.tres"]
+layout/default_style="res://mainStyleDialogue.tres"
 glossary/default_case_sensitive=true
 text/autocolor_names=false
 

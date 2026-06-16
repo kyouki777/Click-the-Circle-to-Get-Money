@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://bk5yubiyrgd77"]
+[gd_scene format=3 uid="uid://bk5yubiyrgd77"]
 
 [ext_resource type="Script" uid="uid://fy2ovpmsje14" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://bf06j7lluoy5i" path="res://scenes/bag.tscn" id="2_85g3d"]
@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cw0gr1npkhlqr" path="res://assets/bg.png" id="5_o6xl0"]
 [ext_resource type="FontFile" uid="uid://pntlljl77f2n" path="res://assets/Poco.ttf" id="5_tefeu"]
 [ext_resource type="Texture2D" uid="uid://ee0s482kjvku" path="res://assets/fill.png" id="6_tipki"]
-[ext_resource type="Script" uid="uid://dd4dgej40t0q4" path="res://scenes/progress_bar.gd" id="7_o6xl0"]
+[ext_resource type="Script" uid="uid://dd4dgej40t0q4" path="res://scripts/progress_bar.gd" id="7_o6xl0"]
 [ext_resource type="Theme" uid="uid://cqst728xxipcw" path="res://addons/dialogic/Editor/Theme/MainTheme.tres" id="9_choun"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_85g3d"]
@@ -748,7 +748,7 @@ VSlider/styles/grabber_area = SubResource("StyleBoxEmpty_qqsli")
 VSlider/styles/grabber_area_highlight = SubResource("StyleBoxEmpty_kh1uf")
 VSlider/styles/slider = SubResource("StyleBoxTexture_1v6qk")
 
-[node name="main" type="Control"]
+[node name="main" type="Control" unique_id=3752554]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -757,12 +757,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0wfyh")
 
-[node name="Bag" parent="." instance=ExtResource("2_85g3d")]
+[node name="Bag" parent="." unique_id=350409585 instance=ExtResource("2_85g3d")]
 visible = false
 top_level = true
 layout_mode = 1
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=618195692]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -770,21 +770,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ClickButton" type="TextureButton" parent="CenterContainer"]
+[node name="ClickButton" type="TextureButton" parent="CenterContainer" unique_id=509520264]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 texture_normal = ExtResource("2_sugp2")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="stats" type="VBoxContainer" parent="."]
+[node name="stats" type="VBoxContainer" parent="." unique_id=2548478]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 script = ExtResource("3_sugp2")
 
-[node name="moneyLabel" type="Label" parent="stats"]
+[node name="moneyLabel" type="Label" parent="stats" unique_id=1148756604]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tefeu")
 theme_override_font_sizes/font_size = 60
@@ -792,14 +792,14 @@ text = "Rp 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="perClick" type="Label" parent="stats"]
+[node name="perClick" type="Label" parent="stats" unique_id=264394225]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tefeu")
 theme_override_font_sizes/font_size = 30
 text = "Per click: Rp 0"
 vertical_alignment = 1
 
-[node name="bar" type="HBoxContainer" parent="."]
+[node name="bar" type="HBoxContainer" parent="." unique_id=1055268548]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -808,7 +808,7 @@ offset_top = -53.0
 offset_right = 514.0
 grow_vertical = 0
 
-[node name="progressLabel" type="Label" parent="bar"]
+[node name="progressLabel" type="Label" parent="bar" unique_id=740591549]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tefeu")
 theme_override_font_sizes/font_size = 40
@@ -816,14 +816,14 @@ text = "Progress"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="progressBar" type="TextureProgressBar" parent="bar"]
+[node name="progressBar" type="TextureProgressBar" parent="bar" unique_id=450454722]
 layout_mode = 2
 theme = SubResource("Theme_augu2")
 texture_under = ExtResource("5_o6xl0")
 texture_progress = ExtResource("6_tipki")
 script = ExtResource("7_o6xl0")
 
-[node name="percentage" type="Label" parent="bar"]
+[node name="percentage" type="Label" parent="bar" unique_id=1246738587]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tefeu")
 theme_override_font_sizes/font_size = 40
@@ -831,7 +831,7 @@ text = "%"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=380659084]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -843,14 +843,14 @@ offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="bagButton" type="Button" parent="HBoxContainer"]
+[node name="bagButton" type="Button" parent="HBoxContainer" unique_id=750240684]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme = ExtResource("9_choun")
 theme_override_font_sizes/font_size = 40
 text = "Bag"
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1860170177]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
