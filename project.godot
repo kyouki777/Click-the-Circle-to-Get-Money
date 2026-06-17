@@ -31,13 +31,27 @@ directories/dch_directory={
 "unit_test_character": "res://addons/Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"main menu": "res://main menu.dtl",
+"milestone1": "res://milestone1.dtl",
+"milestone10": "res://milestone10.dtl",
+"milestone2": "res://milestone2.dtl",
+"milestone3": "res://milestone3.dtl",
+"milestone4": "res://milestone4.dtl",
+"milestone5": "res://milestone5.dtl",
+"milestone6": "res://milestone6.dtl",
+"milestone7": "res://milestone7.dtl",
+"milestone8": "res://milestone8.dtl",
+"milestone9": "res://milestone9.dtl",
 "opening": "res://opening.dtl"
 }
 layout/style_directory={
 "": "res://mainStyleDialogue.tres",
 "mainStyleDialogue": "res://mainStyleDialogue.tres"
 }
-variables={}
+variables={
+"bad_ending": 0,
+"good_ending": 0
+}
 text/letter_speed=0.06
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1

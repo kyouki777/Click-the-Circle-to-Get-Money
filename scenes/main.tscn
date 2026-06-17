@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ee0s482kjvku" path="res://assets/fill.png" id="6_tipki"]
 [ext_resource type="Script" uid="uid://dd4dgej40t0q4" path="res://scripts/progress_bar.gd" id="7_o6xl0"]
 [ext_resource type="Theme" uid="uid://cqst728xxipcw" path="res://addons/dialogic/Editor/Theme/MainTheme.tres" id="9_choun"]
+[ext_resource type="Script" uid="uid://cvnwpfvgg3vu1" path="res://story_manager.gd" id="10_choun"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_85g3d"]
 
@@ -860,6 +861,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="storyManager" type="Node2D" parent="." unique_id=1537636992]
+script = ExtResource("10_choun")
 
 [connection signal="clicks_changed" from="." to="stats" method="_on_control_clicks_changed"]
 [connection signal="clicks_changed" from="." to="stats/perClick" method="_on_control_clicks_changed"]

@@ -14,57 +14,37 @@ func _on_clicks_changed(amount):
 	
 func buy_cursor():
 	var main = get_tree().current_scene
-	var cost = 100
 
-	if main.clicks >= cost:
-		main.clicks -= cost
+	if main.spend_money(100):
 		main.amount_per_click += 1
-
-		main.emit_signal("clicks_changed", main.clicks)
 		main.save_data()
 		
 func buy_cursor2():
 	var main = get_tree().current_scene
-	var cost = 200
 
-	if main.clicks >= cost:
-		main.clicks -= cost
+	if main.spend_money(200):
 		main.amount_per_click += 3
-
-		main.emit_signal("clicks_changed", main.clicks)
 		main.save_data()
-		
+
 func buy_cursor3():
 	var main = get_tree().current_scene
-	var cost = 10000
 
-	if main.clicks >= cost:
-		main.clicks -= cost
+	if main.spend_money(10000):
 		main.amount_per_click += 150
-
-		main.emit_signal("clicks_changed", main.clicks)
 		main.save_data()
 
 func buy_cursor4():
 	var main = get_tree().current_scene
-	var cost = 100000
 
-	if main.clicks >= cost:
-		main.clicks -= cost
+	if main.spend_money(100000):
 		main.amount_per_click += 1500
-
-		main.emit_signal("clicks_changed", main.clicks)
 		main.save_data()
 		
 func buy_cursor5():
 	var main = get_tree().current_scene
-	var cost = 1000000
 
-	if main.clicks >= cost:
-		main.clicks -= cost
+	if main.spend_money(1000000):
 		main.amount_per_click += 15000
-
-		main.emit_signal("clicks_changed", main.clicks)
 		main.save_data()
 
 func _on_extra_click_button_down():
