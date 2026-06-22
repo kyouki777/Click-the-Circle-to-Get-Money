@@ -1,7 +1,10 @@
-me: [ns=3]I think I'm done for the day. [pause=0.2]I need sleep.
+me: [ns=3]Hahah[pause=0.2].[pause=0.2].[pause=0.2].[pause=0.2] the money really did show up in my bank account.
+me: *sigh* [pause=1] I think I'm done for the day. [pause=0.2]I need sleep.
+audio "res://assets/sound/freesound_community-vibrating-message-37619.mp3"
+*Phone vibrates*
 me: What's this?[pause=0.5] A text message from mom?
 [wait time="1.0" hide_text="false"]
-me: [ns=3]"Adam, [pause=0.2]tomorrow is your sister's birthday.[pause=0.2] Can I borrow 100.000 to buy her a present from both you and me?"
+me: [ns=3]"Adam, [pause=0.2]your sister is begging me to buy candy.[pause=0.2] Can I borrow 5.000 to buy her a present from both you and me?"
 me: [pause=0.2].[pause=0.2].[pause=0.2].
 me: What should I do?
 - Give her the money.

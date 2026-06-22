@@ -110,36 +110,45 @@ func _on_dialogic_signal(argument:String) -> void:
 		"milestone2":
 			spend_money(70000)
 			print("milestone2 spent")
+			print("bad end points: ", Dialogic.VAR.bad_ending)
 
 		"milestone3":
 			spend_money(790000)
 			print("milestone3 spent")
+			print("bad end points: ", Dialogic.VAR.bad_ending)
 			
 		"milestone4":
 			spend_money(8000000)
 			print("milestone4 spent")
+			print("bad end points: ", Dialogic.VAR.bad_ending)
 			
 		"milestone5":
 			spend_money(60000000)
 			print("milestone5 spent")
+			print("bad end points: ", Dialogic.VAR.bad_ending)
 			
 		"milestone6":
 			spend_money(100000000)
 			print("milestone6 spent")
+			print("bad end points: ", Dialogic.VAR.bad_ending)
 			
 		"milestone7":
 			spend_money(200000000)
 			print("milestone7 spent")
+			print("bad end points: ", Dialogic.VAR.bad_ending)
 			
 		"milestone8":
 			spend_money(555000000)
 			print("milestone8 spent")
+			print("bad end points: ", Dialogic.VAR.bad_ending)
 			
 		"milestone9":
 			spend_money(700000000)
 			print("milestone9 spent")
+			print("bad end points: ", Dialogic.VAR.bad_ending)
 			
 		"milestone10":
 			spend_money(999999999)
 			print("milestone10 spent")
+			print("bad end points: ", Dialogic.VAR.bad_ending)
 			

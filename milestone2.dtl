@@ -1,0 +1,34 @@
+me: [ns=3.0]This is getting tiring. [pause=0.2] I'm pretty sure a clicker game is supposed to have automatic clicks as well eventually.
+entity: Fortunately, [pause=0.2]this game is designed to fit your needs!
+me: Gah!! You almost made me fell out of my chair!
+me: What the hell does that even mean?! [pause=0.5] I didn't ask for people's lives at stake because of a game!
+entity: Think about it, Adam. [pause=0.2]If you didn't have a goal,[pause=0.2] would you bother touching this game even if it gives you an unlimited amount of money?
+me: Anyone would.
+entity: But not you, Adam.
+[wait time="3.0" hide_text="false"]
+me: Me?
+entity: You're a unique case. [pause=0.2] You want to get rich, yet you refuse to keep money anywhere near you?
+me: Hah. [pause=0.5]What are you saying?
+me: (How did this thing know? I've never even talked about this to my friends)
+entity: Most people's childhood dreams are usually simple and straight-forward. [pause=0.2]Because children are simple.
+entity: But you don't want to get rich because of the money.
+me: Get to the point.
+entity: You are going to get your childhood dream fulfilled, [pause=0.2]Adam! [pause=0.2]Just not in the way you expect.
+me: How do I know that you're not just bluffing?
+entity: You'll see it soon!
+me: What do you mean?
+me: [pause=0.7].[pause=0.7].[pause=0.7].
+me: Dammit![pause=0.2] It's gone again.
+me: Ugh, I really have no time for this. I've got to go to work tomorrow.
+audio "res://assets/sound/freesound_community-vibrating-message-37619.mp3"
+*Phone vibrates*
+me: Another text message from mom.
+me: "Your dad is asking if he can borrow 70.000 to buy a shirt."
+me: Why does he even need a new shirt?
+- Give him the money.
+	set {bad_ending} += 1.0
+	[signal arg="milestone2"]
+	me: It's just 70.000 anyway.
+- Don't give him the money.
+	set {good_ending} += 1.0
+	me: I need to save the money.

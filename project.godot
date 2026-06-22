@@ -26,6 +26,7 @@ Dialogic="*uid://ds2q0uclmolvu"
 [dialogic]
 
 directories/dch_directory={
+"dad": "res://dad.dch",
 "entity": "res://entity.dch",
 "me": "res://me.dch",
 "unit_test_character": "res://addons/Tests/Resources/unit_test_character.dch"

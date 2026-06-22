@@ -1,0 +1,21 @@
+me: [ns=3]Click click click.
+me: Click click click always clicking clicks here clicks there.
+me: Really? [pause=0.5]Is this what my life has become?
+me: A damn slave to this circle?
+me: And while I'm trying to save my family,
+me: they ask me for more and more money.
+me: I only have 10 days left.
+if {bad_ending} == 3.0:
+	me: They keep setting me back to the beginning every damn time.
+me: Hahah.
+me: I'm not even halfway there yet.
+me: I have 10 days left and I'm not even halfway there yet.
+me: Hahahahahah.
+audio "res://assets/sound/freesound_community-vibrating-message-37619.mp3"
+*Phone vibrates*
+me: "Adam. Do you have 60.000.000 in your bank account? We need it to pay off the rest of the debt me and your mom has. The debt collector said they're going to take our house if we don't pay it by tomorrow."
+- Give him the money.
+	set {bad_ending} += 1.0
+	[signal arg="milestone5"]
+- Don't give him the money.
+	set {good_ending} += 1.0
