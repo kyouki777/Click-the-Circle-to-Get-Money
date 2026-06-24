@@ -820,6 +820,7 @@ vertical_alignment = 1
 [node name="progressBar" type="TextureProgressBar" parent="bar" unique_id=450454722]
 layout_mode = 2
 theme = SubResource("Theme_augu2")
+max_value = 1000000000.0
 texture_under = ExtResource("5_o6xl0")
 texture_progress = ExtResource("6_tipki")
 script = ExtResource("7_o6xl0")

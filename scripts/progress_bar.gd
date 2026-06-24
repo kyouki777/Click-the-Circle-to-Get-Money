@@ -1,6 +1,6 @@
 extends TextureProgressBar
 
-@export var max_clicks := 1000000
+@export var max_clicks := 1000000000
 
 func _ready():
 	max_value = max_clicks

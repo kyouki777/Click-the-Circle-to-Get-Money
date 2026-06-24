@@ -113,8 +113,16 @@ theme_override_font_sizes/font_size = 30
 text = "+15.000 clicks for every upgrade"
 horizontal_alignment = 2
 
+[node name="Timer" type="Timer" parent="." unique_id=846902524]
+
 [connection signal="button_down" from="VBoxContainer/extraClick" to="." method="_on_extra_click_button_down"]
+[connection signal="button_up" from="VBoxContainer/extraClick" to="." method="_on_extra_click_button_up"]
 [connection signal="button_down" from="VBoxContainer/extraClick2" to="." method="_on_extra_click_2_button_down"]
+[connection signal="button_up" from="VBoxContainer/extraClick2" to="." method="_on_extra_click_2_button_up"]
 [connection signal="button_down" from="VBoxContainer/extraClick3" to="." method="_on_extra_click_3_button_down"]
+[connection signal="button_up" from="VBoxContainer/extraClick3" to="." method="_on_extra_click_3_button_up"]
 [connection signal="button_down" from="VBoxContainer/extraClick4" to="." method="_on_extra_click_4_button_down"]
+[connection signal="button_up" from="VBoxContainer/extraClick4" to="." method="_on_extra_click_4_button_up"]
 [connection signal="button_down" from="VBoxContainer/extraClick5" to="." method="_on_extra_click_5_button_down"]
+[connection signal="button_up" from="VBoxContainer/extraClick5" to="." method="_on_extra_click_5_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

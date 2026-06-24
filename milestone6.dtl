@@ -1,0 +1,20 @@
+me: This is what I get for helping people, isn't it?
+me: I try to save them and they only know how take, take, and take.
+me: It's my fault if I don't give any, and it's my fault if I give them what they want.
+me: Nobody believes me.
+me: All this because of my stupid childhood dream.
+me: Because I wanted to quit my jobs and give them a better life.
+me: Better life....
+me: (I stop clicking and stare quietly at the computer.)
+me: What exactly was my childhood dream?
+me: ...
+me: ..
+me: .
+audio "res://assets/sound/freesound_community-vibrating-message-37619.mp3"
+*Phone vibrates*
+me: "Your aunt got into an accident and she needs to have an emergency surgery, Adam, please help us. It costs 100.000.000"
+- Give her the money.
+	set {bad_ending} += 1.0
+	[signal arg="milestone6"]
+- Don't give her the money.
+	set {good_ending} += 1.0

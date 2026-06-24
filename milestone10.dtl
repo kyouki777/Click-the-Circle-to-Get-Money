@@ -1,1 +1,18 @@
-if {good_ending} > 0.0:
+audio "res://assets/sound/freesound_community-rotary-phone-ring-medium-103869.mp3"
+[ns=3]*Phone rings*
+me: ...
+me: Who is this?
+kidnapper: Hello Adam.
+kidnapper: We have your family.
+me: What?
+me: (I look at the video the unknown phone number sent me)
+me: (It was a video of my mom and dad, tied up on the ground against each other with their bloody face blinfolded)
+me: (There were small frightened sounds coming from them)
+kidnapper: We know that you have been chosen by Project 144.
+kidnapper: Send 999.999.999 to this account by midnight or we put a bullet in their heads.
+me: ...
+- Send them the money.
+	set {bad_ending} += 1.0
+	[signal arg="milestone10"]
+- Don't send.
+	set {good_ending} += 1.0

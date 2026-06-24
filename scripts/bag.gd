@@ -2,62 +2,86 @@ extends MarginContainer
 
 @onready var wallet_label: Label = $VBoxContainer/HBoxContainer/walletLabel
 
+@onready var hold_timer: Timer = $Timer
+
+var current_buy_function: Callable
+
+
 func _ready() -> void:
 	var main = get_tree().current_scene
-
+	hold_timer.wait_time = 0.1 
 	wallet_label.text = "Wallet: Rp " + str(main.clicks)
 
 	main.clicks_changed.connect(_on_clicks_changed)
 
+
 func _on_clicks_changed(amount):
 	wallet_label.text = "Wallet: Rp " + str(amount)
-	
-func buy_cursor():
+
+
+func buy_upgrade(cost: int, amount: int):
 	var main = get_tree().current_scene
 
-	if main.spend_money(100):
-		main.amount_per_click += 1
-		main.save_data()
-		
-func buy_cursor2():
-	var main = get_tree().current_scene
-
-	if main.spend_money(200):
-		main.amount_per_click += 3
+	if main.spend_money(cost):
+		main.amount_per_click += amount
 		main.save_data()
 
-func buy_cursor3():
-	var main = get_tree().current_scene
 
-	if main.spend_money(10000):
-		main.amount_per_click += 150
-		main.save_data()
+func _on_timer_timeout() -> void:
+	if current_buy_function.is_valid():
+		current_buy_function.call()
 
-func buy_cursor4():
-	var main = get_tree().current_scene
 
-	if main.spend_money(100000):
-		main.amount_per_click += 1500
-		main.save_data()
-		
-func buy_cursor5():
-	var main = get_tree().current_scene
-
-	if main.spend_money(1000000):
-		main.amount_per_click += 15000
-		main.save_data()
-
+# Upgrade 1
 func _on_extra_click_button_down():
-	buy_cursor()
+	current_buy_function = func(): buy_upgrade(100, 1)
+	current_buy_function.call()
+	hold_timer.start()
 
-func _on_extra_click_2_button_down() -> void:
-	buy_cursor2()
 
-func _on_extra_click_3_button_down() -> void:
-	buy_cursor3()
+func _on_extra_click_button_up():
+	hold_timer.stop()
 
-func _on_extra_click_4_button_down() -> void:
-	buy_cursor4()
 
-func _on_extra_click_5_button_down() -> void:
-	buy_cursor5()
+# Upgrade 2
+func _on_extra_click_2_button_down():
+	current_buy_function = func(): buy_upgrade(200, 3)
+	current_buy_function.call()
+	hold_timer.start()
+
+
+func _on_extra_click_2_button_up():
+	hold_timer.stop()
+
+
+# Upgrade 3
+func _on_extra_click_3_button_down():
+	current_buy_function = func(): buy_upgrade(10000, 150)
+	current_buy_function.call()
+	hold_timer.start()
+
+
+func _on_extra_click_3_button_up():
+	hold_timer.stop()
+
+
+# Upgrade 4
+func _on_extra_click_4_button_down():
+	current_buy_function = func(): buy_upgrade(100000, 1500)
+	current_buy_function.call()
+	hold_timer.start()
+
+
+func _on_extra_click_4_button_up():
+	hold_timer.stop()
+
+
+# Upgrade 5
+func _on_extra_click_5_button_down():
+	current_buy_function = func(): buy_upgrade(1000000, 15000)
+	current_buy_function.call()
+	hold_timer.start()
+
+
+func _on_extra_click_5_button_up():
+	hold_timer.stop()

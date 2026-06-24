@@ -1,7 +1,7 @@
 entity: Welcome to Click the Circle!
 entity: Click the Circle and receive all the amount of money you desire.
 entity: You may upgrade the clicks by using the bag feature at the bottom right corner on the screen-
-me: Yeah,[pause=0.2] yeah,[pause=0.2] yeah,[pause=0.2] just get to the point tutorial.
+me: Yeah,[pause=0.1] yeah,[pause=0.1] yeah,[pause=0.1] just get to the point tutorial.
 me: Who in the right mind would even play this boring old game?
 entity: Of course![pause=0.2] But first, let me explain that the amount of money you receive will automatically be alocated to your local bank account.
 me: [pause=0.2].[pause=0.2].[pause=0.2].

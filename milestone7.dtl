@@ -1,0 +1,17 @@
+me: [ns=3]I remember.
+me: What I wanted as a kid
+me: was to make them happy.
+me: ...
+me: Hahah.
+me: How does this even relate to the damn game?
+me: All it does is sever my ties with them.
+me: And now it's either I die from clicking a circle or they all die.
+me: Do they even bother checking up on me?
+audio "res://assets/sound/freesound_community-vibrating-message-37619.mp3"
+*Phone vibrates*
+me: "Your cousin is going to college. He's very bright minded but he needs 200.000.000 to go college."
+- Give him the money.
+	set {bad_ending} += 1.0
+	[signal arg="milestone7"]
+- Don't give him the money.
+	set {good_ending} += 1.0

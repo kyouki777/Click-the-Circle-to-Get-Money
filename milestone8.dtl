@@ -1,0 +1,14 @@
+me: [ns=3](The finger on the mouse continues to click sluggishly like a corpse dragging on.)
+me: .
+me: .
+me: .
+me: .
+me: .
+audio "res://assets/sound/freesound_community-vibrating-message-37619.mp3"
+*Phone vibrates*
+"Why haven't you been answering our phone calls? We need 555.000.000 to buy a car for your uncle's birthday."
+- Give them the money.
+	set {bad_ending} += 1.0
+	[signal arg="milestone8"]
+- Don't give them the money.
+	set {good_ending} += 1.0

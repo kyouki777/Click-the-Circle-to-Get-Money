@@ -4,7 +4,7 @@ extends Control
 @onready var story_manager: Node2D = $storyManager
 
 var clicks = 0
-var amount_per_click = 1000
+var amount_per_click = 1
 
 signal clicks_changed(amount)
 const save_path = "user://userdata.save"
