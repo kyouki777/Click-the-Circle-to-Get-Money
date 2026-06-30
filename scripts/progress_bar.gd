@@ -6,7 +6,6 @@ func _ready():
 	max_value = max_clicks
 
 	var main = get_node("/root/main")
-
 	main.clicks_changed.connect(_on_clicks_changed)
 
 	value = main.clicks

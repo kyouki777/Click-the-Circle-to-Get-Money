@@ -9,6 +9,7 @@ var amount_per_click = 1
 signal clicks_changed(amount)
 const save_path = "user://userdata.save"
 
+
 func _ready() -> void:
 	load_data()
 	emit_signal("clicks_changed", clicks)
@@ -25,7 +26,8 @@ func save_data():
 		"amount_per_click": amount_per_click,
 		"milestones": story_manager.milestones,
 		"good_ending": Dialogic.VAR.good_ending,
-		"bad_ending": Dialogic.VAR.bad_ending
+		"bad_ending": Dialogic.VAR.bad_ending,
+	
 	}
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	file.store_var(data)
@@ -35,6 +37,7 @@ func load_data():
 	if FileAccess.file_exists(save_path):
 		var file = FileAccess.open(save_path, FileAccess.READ)
 		var data = file.get_var()
+		
 		file.close()
 		if typeof(data) == TYPE_DICTIONARY:
 			clicks = data.get("clicks", 0)
@@ -60,10 +63,11 @@ func spend_money(cost: int) -> bool:
 func _on_click_button_button_down() -> void:
 	clicks += amount_per_click
 	emit_signal("clicks_changed", clicks)
+	
 	check_story_events()
 	save_data()
 	print("clicked")
-	
+
 
 func _on_bag_button_button_down() -> void:
 	bag.visible = !bag.visible
@@ -152,3 +156,6 @@ func _on_dialogic_signal(argument:String) -> void:
 			print("milestone10 spent")
 			print("bad end points: ", Dialogic.VAR.bad_ending)
 			
+		"end":
+			await get_tree().create_timer(2.0).timeout
+			get_tree().change_scene_to_file("res://scenes/end.tscn")

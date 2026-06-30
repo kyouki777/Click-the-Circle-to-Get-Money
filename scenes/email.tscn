@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cm2mqn6nowwts"]
 
-[ext_resource type="Script" uid="uid://bjbdo8e3m0xo8" path="res://email.gd" id="1_710lg"]
-[ext_resource type="Texture2D" uid="uid://bklr2kwfye26a" path="res://assets/new-mail-icon.png" id="1_b7pj5"]
-[ext_resource type="Texture2D" uid="uid://d4i0te0ua4ux4" path="res://assets/image.png" id="2_l5d43"]
-[ext_resource type="AudioStream" uid="uid://d13io6pk46pqk" path="res://assets/sound/universfield-new-notification-042-493470.mp3" id="4_vj7p1"]
-[ext_resource type="Texture2D" uid="uid://268bkc4oxqbg" path="res://assets/no-profile-picture-15257_64.png" id="5_vj7p1"]
-[ext_resource type="AudioStream" uid="uid://8y4d460g0tyw" path="res://assets/sound/ncprime-keyboard-typing-one-short-1-292590.mp3" id="6_ylg70"]
-[ext_resource type="FontFile" uid="uid://pntlljl77f2n" path="res://assets/Poco.ttf" id="7_d56f8"]
+[ext_resource type="Script" uid="uid://bjbdo8e3m0xo8" path="res://email.gd" id="1_d5cbr"]
+[ext_resource type="Texture2D" uid="uid://bklr2kwfye26a" path="res://assets/new-mail-icon.png" id="2_f8h04"]
+[ext_resource type="Texture2D" uid="uid://d4i0te0ua4ux4" path="res://assets/image.png" id="3_70sxr"]
+[ext_resource type="AudioStream" uid="uid://d13io6pk46pqk" path="res://assets/sound/universfield-new-notification-042-493470.mp3" id="4_1pmli"]
+[ext_resource type="Texture2D" uid="uid://268bkc4oxqbg" path="res://assets/no-profile-picture-15257_64.png" id="5_dkcua"]
+[ext_resource type="AudioStream" uid="uid://8y4d460g0tyw" path="res://assets/sound/ncprime-keyboard-typing-one-short-1-292590.mp3" id="6_81xuj"]
+[ext_resource type="FontFile" uid="uid://pntlljl77f2n" path="res://assets/Poco.ttf" id="7_raxsc"]
 
 [node name="Control" type="Control" unique_id=479371950]
 layout_mode = 3
@@ -15,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_710lg")
+script = ExtResource("1_d5cbr")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=699470810]
 layout_mode = 1
@@ -50,13 +50,13 @@ text = "Email"
 visible = false
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
-texture_normal = ExtResource("1_b7pj5")
-texture_hover = ExtResource("2_l5d43")
+texture_normal = ExtResource("2_f8h04")
+texture_hover = ExtResource("3_70sxr")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="notifSound" type="AudioStreamPlayer2D" parent="ColorRect/emailContainer/TextureButton" unique_id=1226993875]
-stream = ExtResource("4_vj7p1")
+stream = ExtResource("4_1pmli")
 
 [node name="emailMessage" type="Control" parent="ColorRect" unique_id=231376519]
 layout_mode = 1
@@ -86,7 +86,7 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="ColorRect/emailMessage/HBoxContainer/HBoxContainer" unique_id=1813015439]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
-texture = ExtResource("5_vj7p1")
+texture = ExtResource("5_dkcua")
 stretch_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/emailMessage/HBoxContainer/HBoxContainer" unique_id=1443487609]
@@ -116,7 +116,7 @@ theme_override_font_sizes/normal_font_size = 14
 fit_content = true
 
 [node name="typingSound" type="AudioStreamPlayer2D" parent="ColorRect/emailMessage/HBoxContainer/insideEmail" unique_id=1395172901]
-stream = ExtResource("6_ylg70")
+stream = ExtResource("6_81xuj")
 
 [node name="replyButton" type="Button" parent="ColorRect/emailMessage" unique_id=1801368066]
 visible = false
@@ -126,7 +126,7 @@ offset_left = 811.0
 offset_top = 483.0
 offset_right = 1011.0
 offset_bottom = 533.0
-theme_override_fonts/font = ExtResource("7_d56f8")
+theme_override_fonts/font = ExtResource("7_raxsc")
 theme_override_font_sizes/font_size = 24
 text = "Reply"
 

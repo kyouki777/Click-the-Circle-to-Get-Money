@@ -1,0 +1,86 @@
+if {bad_ending} >= 9.0:
+	me: [ns=3][lspeed=0.5]Entity.
+	me: [lspeed=0.1]What happens when I don't reach my goal again?
+	entity: Your childhood and everyone related to it will expire very soon!
+	me: [lspeed=0.1]Have I run out of time?
+	entity: Correct.
+	me: Hahah.
+	me: When will they die?
+	audio "res://assets/sound/freesound_community-rotary-phone-ring-medium-103869.mp3"
+	*Phone rings*
+	me: ...
+	me: Yes?
+	dad: Adam... thank you for freeing us.
+	me: ...
+	dad: Where did you get the ransom money?
+	me: Dad, I said it countless of times already.
+	dad: That stupid game of yours?
+	dad: Quit joking around now. I'm being serious.
+	me: Why does it even matter where I got it from?
+	me: I saved you[pause=0.5].
+	dad: Have you been dealing with shady people, Adam?
+	dad: Why would they kidnap us because of a "Project"?
+	me: Why do you never believe me?!?!!?!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	me: You are so close to getting the damn point yet completely missing it at tthe same time!!!!
+	me: I am so sick of you all asking me for money for our family for the others family for a family of family everyone and their goddamn mama is profitting off of me!!!!!!!!!!!!!!!!!!
+	dad: ADAM![pause=0.5] Don't you dare talk to your father like that!!!
+	dad: Why are you always like this?!?!?
+	dad: Do you even care about me and your mother?!?!!
+	me: You think
+	me: You really think that I don't care about you?
+	dad: If you give a single damn about us, you would've come home and told your parents the truth.
+	*Call ends*
+	me: ...
+	[wait time="3.0"]
+	audio "res://assets/sound/11325622-police-siren-sound-effect-240674.mp3"
+	"Breaking news."
+	"5 unidentified bodies have just been found near the Hale River."
+	"The witnesses believe that all of them come from the same family and friends group."
+	"Until now, experts have no clue what could be the cause of death of a number people that seemingly died altogether in the same place."
+	.
+	.
+	.
+	me: ...
+else:
+	me: [ns=3]I[pause=0.5].[pause=0.5].[pause=0.5].
+	me: [lspeed=0.3]I did it.
+	me: [lspeed=0.3]1.000.000.000 rupiah.
+	audio "res://assets/sound/freesound_community-vibrating-message-37619.mp3"
+	*Phone vibrates*
+	audio "res://assets/sound/freesound_community-vibrating-message-37619.mp3"
+	*Phone vibrates*
+	audio "res://assets/sound/freesound_community-rotary-phone-ring-medium-103869.mp3"
+	*Phone rings*
+	audio "res://assets/sound/freesound_community-vibrating-message-37619.mp3"
+	*Phone vibrates*
+	audio "res://assets/sound/freesound_community-vibrating-message-37619.mp3"
+	*Phone vibrates*
+	audio "res://assets/sound/freesound_community-vibrating-message-37619.mp3"
+	*Phone vibrates*
+	audio "res://assets/sound/freesound_community-vibrating-message-37619.mp3"
+	*Phone vibrates*
+	audio "res://assets/sound/freesound_community-vibrating-message-37619.mp3"
+	*Phone vibrates*
+	[wait time="3.0"]
+	me: (I turn off my phone that's been blowing off since an hour ago.)
+	me: (It was full of death threats anyway from all the people who knows me)
+	me: (Because I didn't choose to save them.)
+	me: [lspeed=0.15]Entity.
+	entity: Congratulations on fulfilling your childhood dream, Adam!
+	entity: Is there anything that I can help you with?
+	me: [lspeed=0.15]...
+	me: [lspeed=0.15]Wasn't it my childhood dream to make my family happy by being rich?
+	entity: Not quite correct.
+	me: [lspeed=0.15]Hahah.... 1 billion rupiah isn't even a lot for corrupters.
+	[wait time="3.0"]
+	me: (I stare blankly at the ten digit number on my screen)
+	me: (As I was reminiscing the past like a broken record)
+	me: (A flash of light came through me, and the pieces started to fall in place.)
+	me: [lspeed=0.15]Was it
+	me: [lspeed=0.15]making myself happy?
+	entity: Are you happy, Adam?
+	me: (I stare at my hands, fingers calloused from clicking the mouse for 30 days straight)
+	me: (A murderer's hands should be red.)
+	me: (But strangely, I only feel a deep sense of irony.)
+	me: (A smile grows on my face while I huff out a half-hearted laugh.)
+	me: [lspeed=0.3]I am[pause=0.3] happy.

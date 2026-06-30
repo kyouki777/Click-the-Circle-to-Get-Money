@@ -84,4 +84,5 @@ I want to get 1 billion rupiah in 30 days.
 
 
 func _on_reply_button_button_down() -> void:
-	print("reply pressed")
+	get_tree().change_scene_to_file("res://MainMenu.tscn")
+	print("Meow")

@@ -1,5 +1,6 @@
 extends Node
 
+
 var milestones = {
 	10000: false,
 	100000: false,
