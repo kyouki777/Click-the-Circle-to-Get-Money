@@ -19,6 +19,9 @@ func get_clicks() -> int:
 
 
 func _ready() -> void:
+	Dialogic.timeline_ended.connect(_on_dialogic_timeline_ended)
+
+
 	win_label.visible = false
 	lose_label.visible = false
 
@@ -43,3 +46,6 @@ func _ready() -> void:
 		await get_tree().create_timer(15.0).timeout
 		Dialogic.start("end")
 		$ColorRect/loseLabel/AnimationPlayer.stop()
+		
+func _on_dialogic_timeline_ended() -> void:
+	get_tree().change_scene_to_file("res://MainMenu.tscn")
