@@ -42,7 +42,7 @@ offset_bottom = 272.0
 grow_horizontal = 2
 theme = ExtResource("1_i26rj")
 theme_override_font_sizes/font_size = 60
-text = "Click the Circle to Get Money"
+text = "Click The Circle to Get Money"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -68,12 +68,11 @@ theme_override_font_sizes/font_size = 30
 text = "Start"
 
 [node name="optionsButton" type="Button" parent="ColorRect/VBoxContainer" unique_id=500373467]
-visible = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 theme = ExtResource("1_i26rj")
 theme_override_font_sizes/font_size = 30
-text = "Options"
+text = "New Game"
 
 [node name="exitButton" type="Button" parent="ColorRect/VBoxContainer" unique_id=1360200271]
 custom_minimum_size = Vector2(300, 0)

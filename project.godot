@@ -17,7 +17,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Click The Circle For Money"
 run/main_scene="uid://c6v4no7ehhxdh"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://d368ultm7cvma"
 
 [autoload]
 

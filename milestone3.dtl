@@ -6,9 +6,9 @@ me: Hello?
 dad: Adam.
 me: (Why does he sound like he's about to cry?)
 me: Dad? Why are you calling me at 4 am?
-dad: [ns=3]Your[pause=0.6] your sister [lspeed=0.4]is [lspeed=0.5]dead.
-me: [ns=5][pause=0.9].[pause=0.9].[pause=0.9].
-dad: Drunk driver. [pause=0.5] He's dead at the scene too.
+dad: [ns=3]Your[pause=0.6] your sister is [pause=0.9]dead.
+me: [pause=0.9].[pause=0.9].[pause=0.9].
+dad: Drunk driver. [pause=0.5] Dead at the scene too.
 dad: I- [pause=0.6] I need 790.000 to get her favourite flowers for the funeral.
 - Give him the money.
 	set {bad_ending} += 1.0

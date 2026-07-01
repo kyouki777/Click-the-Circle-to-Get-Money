@@ -19,6 +19,20 @@ func _ready() -> void:
 	print("loaded good ending points: ", Dialogic.VAR.good_ending)
 	print("loaded bad ending points: ", Dialogic.VAR.bad_ending)
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+
+func new_game():
+	clicks = 0
+	amount_per_click = 1
+
+	story_manager.reset_milestones()
+
+	Dialogic.VAR.good_ending = 0
+	Dialogic.VAR.bad_ending = 0
+
+	emit_signal("clicks_changed", clicks)
+	save_data()
+
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
 	
 func save_data():
 	var data = {

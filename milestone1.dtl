@@ -10,5 +10,6 @@ me: What should I do?
 - Give her the money.
 	set {bad_ending} = 1.0
 	[signal arg="milestone1"]
+	me: It's just five thousand anyway.
 - Don't give her the money.
 	set {good_ending} = 1.0

@@ -11,6 +11,11 @@ me: Hahah.
 me: I'm not even halfway there yet.
 me: I have 10 days left and I'm not even halfway there yet.
 me: Hahahahahah.
+me: Wait.
+me: Maybe... I could use something to make it click faster.
+entity: Hold on right there!
+entity: You're not allowed to use anything else.
+me: ...
 audio "res://assets/sound/freesound_community-vibrating-message-37619.mp3"
 *Phone vibrates*
 me: "Adam. Do you have 60.000.000 in your bank account? We need it to pay off the rest of the debt me and your mom has. The debt collector said they're going to take our house if we don't pay it by tomorrow."

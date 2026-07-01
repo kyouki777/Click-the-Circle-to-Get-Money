@@ -1,4 +1,4 @@
-if {bad_ending} >= 9.0:
+if {bad_ending} > 9.0:
 	me: [ns=3][lspeed=0.5]Entity.
 	me: [lspeed=0.1]What happens when I don't reach my goal again?
 	entity: Your childhood and everyone related to it will expire very soon!
@@ -22,12 +22,14 @@ if {bad_ending} >= 9.0:
 	dad: Why would they kidnap us because of a "Project"?
 	me: Why do you never believe me?!?!!?!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	me: You are so close to getting the damn point yet completely missing it at tthe same time!!!!
-	me: I am so sick of you all asking me for money for our family for the others family for a family of family everyone and their goddamn mama is profitting off of me!!!!!!!!!!!!!!!!!!
+	me: I am so sick [pause=0.5]of you all asking me for money for our family for the others family for a family of family everyone and their goddamn mama is profiting off of me for years and years.
 	dad: ADAM![pause=0.5] Don't you dare talk to your father like that!!!
 	dad: Why are you always like this?!?!?
 	dad: Do you even care about me and your mother?!?!!
 	me: You think
 	me: You really think that I don't care about you?
+	me: After all that I've done for you?
+	dad: It's your duty as a son.
 	dad: If you give a single damn about us, you would've come home and told your parents the truth.
 	*Call ends*
 	me: ...
@@ -40,6 +42,7 @@ if {bad_ending} >= 9.0:
 	.
 	.
 	.
+	[wait time="3.0"]
 	me: ...
 else:
 	me: [ns=3]I[pause=0.5].[pause=0.5].[pause=0.5].
