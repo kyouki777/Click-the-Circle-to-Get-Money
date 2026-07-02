@@ -11,7 +11,7 @@ func _on_animation_player_animation_finished(anim_name: String) -> void:
 
 	if is_first_launch():
 		set_first_launch_false()
-		get_tree().change_scene_to_file("res://Scenes/email.tscn")
+		get_tree().change_scene_to_file("res://scenes/email.tscn")
 	else:
 		get_tree().change_scene_to_file("res://MainMenu.tscn")
 

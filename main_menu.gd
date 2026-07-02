@@ -3,7 +3,7 @@ extends Control
 const MAIN_MENU_SAVE := "user://main_menu_intro.save"
 const START_INTRO_SAVE := "user://start_intro.save"
 const SAVE_PATH = "user://userdata.save"
-
+var start_new_game := false
 
 func _ready() -> void:
 	if not has_seen_main_menu_intro():
@@ -24,15 +24,22 @@ func _on_start_button_button_down() -> void:
 
 
 func _on_options_button_button_down() -> void:
-	if FileAccess.file_exists(SAVE_PATH):
-		DirAccess.remove_absolute(SAVE_PATH)
+	start_new_game = true
 
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
-
+	if not has_seen_start_intro():
+		set_start_intro_seen()
+		Dialogic.start("opening")
+	else:
+		_start_new_game()
 
 func _on_exit_button_button_down() -> void:
 	get_tree().quit()
 
+func _start_new_game():
+	if FileAccess.file_exists(SAVE_PATH):
+		DirAccess.remove_absolute(SAVE_PATH)
+
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 func has_seen_main_menu_intro() -> bool:
 	if not FileAccess.file_exists(MAIN_MENU_SAVE):
